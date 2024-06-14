@@ -1,0 +1,229 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Carnivalist - Email Template</title>
+    <style type="text/css">
+        body {
+            background: #f5f5f5;
+            line-height: 18px;
+            margin: 0;
+            font-family: "verdana", Helvetica, Arial, sans-serif !important;
+            color: #3b3b3b;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a,
+        img {
+            border: none;
+            outline: none;
+        }
+
+        .strong {
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: #f5f5f5">
+        <table style="
+          margin: 0 auto;
+          text-align: center;
+          width: 100%;
+          border: 0;
+          padding: 0;
+          background-color: #f5f5f5;
+        " cellspacing="0" cellpadding="0">
+            <tr>
+                <td bgcolor="#F5F5F5" style="padding: 30px 0; background-color: #f5f5f5">
+                        <tr>
+                            <td bgcolor="#ffffff" style="
+                    padding: 25px 20px 20px;
+                    border-bottom: 1px solid #cecece;
+                    text-align: center;
+                    vertical-align: middle;
+                    background: #ffffff;
+                  ">
+                                <a href="#" style="
+                      display: inline-block;
+                      text-decoration: none;
+                      color: #fff;
+                      outline: none;
+                    "><img src="logo.png" style="
+                        margin: 0;
+                        vertical-align: middle;
+                        border: none;
+                        outline: none;
+                        height: 38px;
+                        width: 90px;
+                      " alt="Carnivalist" /></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td align="left" valign="top" bgcolor="#ffffff" style="
+                    padding: 25px 25px 25px;
+                    text-align: left;
+                    vertical-align: top;
+                    background-color: #ffffff;
+                    font-family: 'verdana', Helvetica, Arial, sans-serif !important;
+                    color: #3b3b3b;
+                    font-size: 14px;
+                    line-height: 22px;
+                    font-weight: 400;
+                  ">
+                                <p style="
+                      font-family: 'verdana', Helvetica, Arial, sans-serif !important;
+                      color: #3b3b3b;
+                      font-size: 14px;
+                      line-height: 22px;
+                      font-weight: bold;
+                      margin: 0;
+                    ">
+                                    <strong style="font-size: 14px">Dear {{buyerName}}</strong>,
+                                </p>
+                                <div style="
+                      height: 15px;
+                      width: 100%;
+                      line-height: 15px;
+                      clear: both;
+                    "></div>
+                                <p style="
+                      font-family: 'verdana', Helvetica, Arial, sans-serif !important;
+                      color: #3b3b3b;
+                      font-size: 14px;
+                      line-height: 22px;
+                      font-weight: normal;
+                      margin: 0;
+                    ">
+                                    This is your order.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Order Number : </td>
+                            <td>{{orderNumber}}</td>
+                        </tr>
+                        <tr>
+                            <td>Quantity : </td>
+                            <td>{{quantity}}</td>
+                        </tr>
+                        <tr>
+                            <td>Price : </td>
+                            <td>{{price}}</td>
+                        </tr>
+                        <tr>
+                            <td>Order Date : </td>
+                            <td>{{orderDate}}</td>
+                        </tr>
+                        <tr>
+                            <td>Order Status : </td>
+                            <td>{{orderStatus}}</td>
+                        </tr>
+                        <tr>
+                            <td>Delivery Method : </td>
+                            <td>{{deliveryMethod}}</td>
+                        </tr>
+                        <tr>
+                            <td>Order Type : </td>
+                            <td>{{orderType}}</td>
+                        </tr>
+                        <tr>
+                            <td>Attendees : </td>
+                           <td>
+                            {{#each attendees}}
+                            <table border="1" align="center" style="
+          margin: 0 auto;
+          text-align: center;
+          width: 100%;
+          border: 0;
+          padding: 0;
+          background-color: #f5f5f5;
+        "  >
+                                    <tr>
+                                        <td>name</td>
+                                        <td>{{name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>barcode</td>
+                                        <td>{{barcode}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>paymentType</td>
+                                        <td>{{paymentType}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>price</td>
+                                        <td>{{price}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>qty</td>
+                                        <td>{{qty}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TicketName</td>
+                                        <td>{{TicketName}}</td>
+                                    </tr>
+                            </table>
+                            <br>
+                            {{/each}}
+                           </td> 
+                        </tr>
+
+                        <tr>
+                            <td bgcolor="#27272A" valign="top" style="
+                    padding: 15px 15px;
+                    text-align: center;
+                    vertical-align: top;
+                    background-color: #000000;
+                    font-family: 'verdana', Helvetica, Arial, sans-serif !important;
+                    color: #8d8d8d;
+                    font-size: 13px;
+                    line-height: 20px;
+                    font-weight: 400;
+                    text-align: center;
+                  ">
+                                <p style="
+                      font-family: 'verdana', Helvetica, Arial, sans-serif !important;
+                      color: #8d8d8d;
+                      font-size: 13px;
+                      line-height: 20px;
+                      font-weight: 400;
+                      text-align: center;
+                      margin: 0;
+                    ">
+                                    Copyright &copy;{{copyrightYear}} Carnivalist. All rights reserved.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
